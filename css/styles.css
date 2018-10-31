@@ -1,0 +1,291 @@
+:root {
+  --f-PTSansNarrow: "PT Sans Narrow";
+  --f-Gothic: "DeutschGothicRegular";
+  --c-red: red;
+  --c-black: black;
+  --c-white: white;
+}
+
+@font-face {
+  font-family: "DeutschGothicRegular";
+  src: url("../fonts/DeutschGothicRegular/DeutschGothicRegular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DeutschGothicRegular/DeutschGothicRegular.woff")
+      format("woff"),
+    url("../fonts/DeutschGothicRegular/DeutschGothicRegular.ttf")
+      format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  font-family: var(--f-PTSansNarrow);
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  padding: 10px;
+  max-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+li:after {
+  content: "—";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+li {
+  position: relative;
+  padding-left: 1.15em;
+}
+
+.h1 {
+  font-size: 40px;
+  line-height: 1.1;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  max-width: 200px;
+}
+
+.h2 {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.gothic {
+  font-family: var(--f-Gothic);
+}
+
+a {
+  color: var(--c-black);
+  display: inline-block;
+  text-decoration: none;
+  color: #186baa;
+  border-bottom: 1px solid rgba(24, 107, 170, 0.15);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+a:focus,
+a:hover {
+  color: #d26028;
+  border-bottom-color: rgba(210, 96, 40, 0.15);
+  -webkit-transition: none;
+  transition: ;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.contact a {
+  padding-left: 3px;
+}
+
+section {
+  padding-bottom: 15px;
+}
+
+section p:not(:last-child) {
+  margin-bottom: 2px;
+}
+
+section:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.portfolio ol {
+  padding-left: 20px;
+}
+
+.moving-wrapper {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  will-change: contents;
+  width: 100%;
+  z-index: -1;
+}
+
+.moving-wrapper:nth-of-type(2) {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.guys {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+.pers0 {
+  animation-name: moving-for-zero-pers;
+  animation-direction: initial;
+  animation-duration: 20s;
+  animation-fill-mode: backwards;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.pers1 {
+  animation-name: moving-for-first-pers;
+  animation-direction: initial;
+  animation-duration: 20s;
+  animation-fill-mode: backwards;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform: scaleX(-1);
+}
+
+.pers2 {
+  animation-name: moving-for-second-pers;
+  animation-direction: initial;
+  animation-duration: 20s;
+  animation-fill-mode: backwards;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moving-for-zero-pers {
+  0% {
+    transform: translate(-100px, 50px);
+  }
+
+  100% {
+    transform: translate(768px, 50px);
+  }
+}
+
+@keyframes moving-for-first-pers {
+  0% {
+    transform: translate(-200px, 250px);
+  }
+
+  100% {
+    transform: translate(768px, 250px);
+  }
+}
+
+@keyframes moving-for-second-pers {
+  0% {
+    transform: translate(-200px, 550px);
+  }
+
+  100% {
+    transform: translate(768px, 350px);
+  }
+}
+
+@media (min-width: 768px) {
+  .h1 {
+    font-size: 50px;
+  }
+
+  .h2 {
+    font-size: 21px;
+  }
+
+  .container {
+    max-width: 25rem;
+  }
+
+  section a,
+  section p,
+  section li {
+    font-size: 18px;
+  }
+
+  @keyframes moving-for-zero-pers {
+    0% {
+      transform: translate(-100px, 50px);
+    }
+
+    100% {
+      transform: translate(1360px, 50px);
+    }
+  }
+
+  @keyframes moving-for-first-pers {
+    0% {
+      transform: translate(-200px, 250px);
+    }
+
+    100% {
+      transform: translate(1360px, 250px);
+    }
+  }
+
+  @keyframes moving-for-second-pers {
+    0% {
+      transform: translate(-150px, 650px);
+    }
+
+    50% {
+      transform: translate(560px, 350px);
+    }
+
+    50% {
+      transform: translate(560px, 350px);
+    }
+
+    100% {
+      transform: translate(1360px, 650px);
+    }
+  }
+
+  @media (min-width: 1366px) {
+    @keyframes moving-for-zero-pers {
+      0% {
+        transform: translate(-100px, 50px);
+      }
+
+      100% {
+        transform: translate(1920px, 50px);
+      }
+    }
+
+    @keyframes moving-for-first-pers {
+      0% {
+        transform: translate(-200px, 250px);
+      }
+
+      100% {
+        transform: translate(1920px, 250px);
+      }
+    }
+
+    @keyframes moving-for-second-pers {
+      0% {
+        transform: translate(-150px, 650px);
+      }
+
+      50% {
+        transform: translate(860px, 350px);
+      }
+
+      50% {
+        transform: translate(861px, 350px);
+      }
+
+      100% {
+        transform: translate(1920px, 650px);
+      }
+    }
+  }
+}

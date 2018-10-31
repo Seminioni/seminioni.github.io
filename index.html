@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Михаил Семин, фронтенд-разработчик</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&amp;subset=cyrillic" rel="stylesheet">
+  
+  <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="manifest" href="favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="css/mini-reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+<body>
+  <div class="container">
+
+    <h1 class="h1 gothic">Михаил Семин</h1>
+
+    <section class="bio">
+      <h2 class="h2 gothic">Био</h2>
+      <p>
+        <span id="age">25</span> лет, живу в Санкт-Петербурге, работаю в
+        <a href="https://emlid.com/" target='_blank' rel="noopener noreferrer">Emlid</a>
+      </p>
+    </section>
+    <section class="frontend">
+      <h2 class="h2 gothic">Разрабатываю интерфейсы</h2>
+      <p>Люблю оживлять дизайн: верстать, автоматизировать, анимировать, писать логику на JavaScript.
+      </p>
+    </section>
+    <section class="portfolio">
+      <h2 class="h2 gothic">По существу</h2>
+      <ul>
+        <li>
+          <a href="https://coinsage.netlify.com/">Coinsage</a> — делаю блидинг эдж (нет)...</li>
+        <li>
+          <li>
+            <a href="https://github.com/Seminioni/workshops">Воркшоплюсь</a> как могу...</li>
+      </ul>
+    </section>
+    <section class='contact'>
+      <h2 class="h2 gothic">Контакты</h2>
+      <p>mail:
+        <a class='mail' href='mailto:seminioni@gmail.com' rel="noopener noreferrer">seminioni@gmail.com</a>
+      </p>
+      <p>vk:
+        <a class='fb' href='https://vk.com/seminioni' target='_blank' rel="noopener noreferrer">seminioni</a>
+      </p>
+      <p>instagram:
+        <a class='insta' href='https://www.instagram.com/seminioni' target='_blank' rel="noopener noreferrer">seminioni</a>
+      </p>
+      <p>github:
+        <a class='github' href='https://github.com/seminioni' target='_blank' rel="noopener noreferrer">seminioni</a>
+      </p>
+
+    </section>
+    <div class="moving-wrapper">
+      <span class="guys pers0">
+        <img src="img/pers0.gif" alt="Picture of the zero personage">
+      </span>
+    </div>
+    <div class="moving-wrapper">
+      <span class="guys pers1 moving-wrapper ">
+        <img src="img/pers1.gif" alt="Picture of the first personage">
+      </span>
+    </div>
+    <div class="moving-wrapper">
+      <span class="guys pers2 moving-wrapper ">
+        <img src="img/pers2.gif" alt="Picture of the second personage">
+      </span>
+    </div>
+
+
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      document.querySelector('#age').innerText = setMyAge()
+    })
+
+    function setMyAge() {
+      const birth = (new Date('1993-08-01')).getTime()
+      const now = Date.now()
+      const age = ~~((now - birth) / 1000 / 60 / 60 / 24 / 365)
+
+      return age
+    }
+
+  </script>
+</body>
+
+</html>
