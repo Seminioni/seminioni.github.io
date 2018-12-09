@@ -82,13 +82,6 @@ a:hover {
   transition: ;
 }
 
-.contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  flex-grow: 1;
-}
-
 .contact a {
   padding-left: 3px;
 }
